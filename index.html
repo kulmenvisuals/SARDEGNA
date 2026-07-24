@@ -332,7 +332,7 @@
   }
 
   /* ============ TRABAJO / PRUEBA ============ */
-  .projects { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 26px; align-items: start; }
+  .projects { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px; align-items: start; }
   .project { display: flex; flex-direction: column; }
   .project-video {
     border-radius: var(--r-md); overflow: hidden; position: relative;
@@ -357,6 +357,14 @@
   .project-metric span { display: block; font-family: var(--mono); font-size: 8px; letter-spacing: .06em; text-transform: uppercase; color: var(--niebla-2); margin-top: 5px; line-height: 1.35; }
   .project-desc { font-size: .88rem; color: var(--niebla); line-height: 1.6; font-weight: 300; }
   .project-desc strong { color: var(--hueso); font-weight: 600; }
+
+  /* Pieza destacada: el drone tour es horizontal y necesita ancho */
+  .project-feature { display: grid; grid-template-columns: 1.45fr 1fr; gap: 32px; align-items: center; margin-bottom: 40px; }
+  .project-feature .project-video { max-width: 100%; margin: 0; }
+  .project-feature .project-video iframe { aspect-ratio: 16/9; transform: scale(1.02); }
+  .project-feature-meta { text-align: left; }
+  .project-feature-meta .project-title { font-size: 1.45rem; font-weight: 700; letter-spacing: -.025em; margin-bottom: 14px; }
+  .project-feature-meta .project-desc { font-size: .95rem; line-height: 1.7; }
 
   .gallery-head { margin-top: clamp(72px, 8vw, 104px); display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
   .gallery-head h3 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 600; letter-spacing: -.02em; color: var(--hueso); }
@@ -675,7 +683,7 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 1020px) {
-    .formats, .problems, .programs, .projects, .credentials, .assurance { grid-template-columns: 1fr; }
+    .formats, .problems, .programs, .projects, .credentials, .assurance, .project-feature { grid-template-columns: 1fr; }
     .benefits-grid { grid-template-columns: 1fr; }
     .photo-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -888,6 +896,17 @@
     <h2 class="section-title reveal">Risultati con <em>strutture ricettive</em></h2>
     <p class="section-intro reveal">Ho lavorato con strutture turistiche e agenzie immobiliari in Spagna. Ogni progetto parte da un obiettivo concreto: nel vostro caso, trasformare chi guarda in ospiti che prenotano.</p>
 
+    <div class="project-feature reveal">
+      <div class="project-video">
+        <iframe src="https://player.vimeo.com/video/1212461582?autoplay=1&loop=1&muted=1&background=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Drone tour FPV — O Lagar de Jesus"></iframe>
+      </div>
+      <div class="project-feature-meta">
+        <div class="project-client">O Lagar de Jesus</div>
+        <div class="project-title">Drone tour FPV completo</div>
+        <p class="project-desc">Un solo volo, nessuno stacco: dall'esterno all'ingresso, dalle camere fino all'ultimo angolo. In un tour FPV l'ospite capisce in pochi secondi <strong>com'è fatta davvero la struttura</strong> — la disposizione, le distanze, l'atmosfera — quello che venti fotografie separate non riescono a trasmettere. È il contenuto che trattiene chi arriva sulla vostra home invece di farlo tornare indietro. Incluso nel Pacchetto 03.</p>
+      </div>
+    </div>
+
     <div class="projects">
       <div class="project reveal">
         <div class="project-video">
@@ -901,16 +920,6 @@
             <div class="project-metric"><strong>+4.500</strong><span>nuovi follower</span></div>
           </div>
           <p class="project-desc">In sole <strong>3 pubblicazioni</strong>. Produzione integrale: reel FPV per i social e servizio fotografico completo per sito e portali.</p>
-        </div>
-      </div>
-      <div class="project reveal">
-        <div class="project-video">
-          <iframe src="https://player.vimeo.com/video/1212673380?autoplay=1&loop=1&muted=1&background=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Drone tour FPV — O Lagar de Jesus"></iframe>
-        </div>
-        <div class="project-meta">
-          <div class="project-client">O Lagar de Jesus</div>
-          <div class="project-title">Drone tour FPV</div>
-          <p class="project-desc">Un <strong>unico volo continuo</strong> attraverso tutta la proprietà, senza stacchi: esattamente il formato incluso nel Pacchetto 03.</p>
         </div>
       </div>
       <div class="project reveal">
