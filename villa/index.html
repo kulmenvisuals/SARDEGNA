@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un'immagine professionale per la vostra villa in Sardegna · Kulmen Visuals</title>
+<meta name="description" content="Un'immagine professionale che alza la percezione della vostra villa in Sardegna e la fa scoprire a viaggiatori nuovi. In cambio di 1–3 notti di soggiorno. Zero costi.">
+<meta property="og:title" content="Un'immagine professionale per la vostra villa in Sardegna · Kulmen Visuals">
+<meta property="og:description" content="Fotografia e reel di livello professionale. In cambio di un soggiorno.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#09090b">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Sistema Kulmen — extraído de kulmenvisuals.com */
+    --negro: #09090b;        /* fondo base, zinc-950 */
+    --carbon: #131316;       /* superficie elevada */
+    --carbon-2: #18181b;     /* superficie alternativa */
+    --brasa: #180c02;        /* negro-ámbar profundo (panel de oferta) */
+    --ambar: #f59715;        /* acento primario */
+    --ambar-claro: #f7ab3d;  /* hover / degradado */
+    --dolor: #e2543f;        /* acento de dolor/riesgo — solo diagnóstico */
+    --dolor-soft: rgba(226,84,63,.12);
+    --hueso: #fafafa;        /* titulares */
+    --niebla: #a1a1aa;       /* cuerpo de texto */
+    --niebla-2: #86868f;     /* texto secundario */
+    --linea: rgba(250,250,250,.08);
+    --linea-fuerte: rgba(250,250,250,.14);
+    --r-md: 16px;
+    --r-lg: 24px;
+    --ease: cubic-bezier(.16,1,.3,1);
+    --grotesk: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    font-family: var(--grotesk);
+    background: var(--negro);
+    color: var(--niebla);
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+  ::selection { background: rgba(245,151,21,.35); color: var(--hueso); }
+  img { max-width: 100%; }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--ambar); outline-offset: 3px; border-radius: 4px;
+  }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .wrap-narrow { max-width: 840px; margin: 0 auto; padding: 0 32px; }
+
+  /* ============ TOPBAR ============ */
+  .topbar {
+    position: fixed; inset: 0 0 auto 0; z-index: 60;
+    padding: 20px 32px 0;
+  }
+  .topbar-inner {
+    position: relative;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    max-width: 1180px; margin: 0 auto; padding: 10px 18px 10px 22px;
+    border-radius: 9999px;
+    background: rgba(24,24,27,.55);
+    border: 1px solid rgba(250,250,250,.1);
+    box-shadow: 0 12px 34px rgba(0,0,0,.28);
+    backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%);
+    transition: background .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  .topbar.scrolled .topbar-inner {
+    background: rgba(18,18,21,.78);
+    border-color: rgba(250,250,250,.14);
+    box-shadow: 0 16px 40px rgba(0,0,0,.4);
+  }
+  .logo { display: flex; align-items: center; gap: 14px; min-width: 0; text-decoration: none; }
+  .logo-mark { width: 64px; height: 64px; display: grid; place-items: center; overflow: hidden; flex-shrink: 0; }
+  .logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .logo-word { height: 30px; width: auto; display: block; }
+  .top-nav { display: flex; align-items: center; gap: 2px; margin-left: auto; }
+  .top-nav a {
+    color: rgba(250,250,250,.88); text-decoration: none; font-size: 13px; font-weight: 500;
+    letter-spacing: .01em; padding: 9px 14px; border-radius: 999px;
+    transition: color .25s, background .25s;
+    text-shadow: 0 1px 10px rgba(9,9,11,.55);
+  }
+  .top-nav a:hover { color: var(--hueso); background: rgba(250,250,250,.06); }
+  .top-nav a.top-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 20px; border-radius: 9999px; margin-left: 14px;
+    background: var(--ambar); color: var(--negro); text-decoration: none;
+    font-size: 13px; font-weight: 700; letter-spacing: .01em;
+    transition: background .25s, transform .25s var(--ease);
+  }
+  .top-nav a.top-cta:hover { background: var(--ambar-claro); color: var(--negro); transform: translateY(-1px); }
+  .top-nav a.top-cta svg { width: 15px; height: 15px; }
+  .progress-track {
+    position: absolute; left: 26px; right: 26px; bottom: 6px; height: 2px;
+    border-radius: 2px; overflow: hidden; background: rgba(250,250,250,.08); z-index: 3;
+  }
+  .progress { height: 100%; width: 0%; border-radius: 2px; background: linear-gradient(90deg, var(--ambar), var(--ambar-claro)); }
+
+  /* ============ HERO / CARRUSEL FOTOGRÁFICO ============ */
+  .hero {
+    position: relative; overflow: hidden; isolation: isolate;
+    min-height: 100svh; display: flex; align-items: center;
+    padding: 170px 0 150px; color: var(--hueso);
+    background: var(--negro);
+  }
+  .hero-photos { position: absolute; inset: 0; z-index: -3; overflow: hidden; background: var(--carbon); }
+  .hero-photo {
+    position: absolute; inset: 0;
+    background-position: center; background-size: cover; background-repeat: no-repeat;
+    opacity: 0; transform: scale(1.04);
+    transition: opacity 1.8s ease, transform 9s linear;
+    will-change: opacity, transform;
+  }
+  .hero-photo.active { opacity: 1; transform: scale(1.13); }
+  .hero-scrim {
+    position: absolute; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(9,9,11,.82) 0%, rgba(9,9,11,.56) 46%, rgba(9,9,11,.16) 78%, rgba(9,9,11,.05) 100%),
+      rgba(9,9,11,.24);
+  }
+  /* Indicador de encuadre: refuerza que esto va de fotografía */
+  .hero-frame {
+    position: absolute; z-index: 3; right: 42px; bottom: 120px;
+    width: 138px; height: 172px; pointer-events: none;
+    opacity: .5;
+  }
+  .hero-frame::before, .hero-frame::after,
+  .hero-frame i::before, .hero-frame i::after {
+    content: ''; position: absolute; width: 26px; height: 26px;
+    border: 1.5px solid var(--hueso);
+  }
+  .hero-frame::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+  .hero-frame::after { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+  .hero-frame i::before { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+  .hero-frame i::after { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+  .hero-counter {
+    position: absolute; z-index: 3; right: 42px; bottom: 88px;
+    font-family: var(--mono); font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+    color: rgba(250,250,250,.6);
+  }
+
+  .hero-content { position: relative; z-index: 4; max-width: 950px; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--ambar); margin-bottom: 30px;
+  }
+  .hero-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--ambar); flex-shrink: 0; }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.6vw, 4.8rem); line-height: 1.0; letter-spacing: -.03em; font-weight: 700;
+    max-width: 900px; margin-bottom: 28px; text-wrap: balance;
+    text-shadow: 0 2px 28px rgba(9,9,11,.5);
+  }
+  .hero h1 em { font-style: normal; color: var(--ambar); }
+  .hero p.lead {
+    font-size: 1.1rem; color: rgba(250,250,250,.92); font-weight: 300; max-width: 620px;
+    line-height: 1.75; margin-bottom: 40px;
+    text-shadow: 0 1px 18px rgba(9,9,11,.55);
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 52px; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 16px 32px; border-radius: 9999px;
+    background: var(--ambar); color: var(--negro);
+    text-decoration: none; font-weight: 700; font-size: 14.5px; letter-spacing: .01em;
+    border: 0; cursor: pointer;
+    transition: background .25s, transform .25s var(--ease), box-shadow .25s var(--ease);
+    box-shadow: 0 10px 34px rgba(245,151,21,.28);
+  }
+  .btn:hover { background: var(--ambar-claro); transform: translateY(-2px); box-shadow: 0 16px 44px rgba(245,151,21,.36); }
+  .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .btn .arrow { transition: transform .25s var(--ease); }
+  .btn:hover .arrow { transform: translateX(4px); }
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
+    width: 100%; margin: 0 auto; border-radius: var(--r-md); overflow: hidden;
+    border: 1px solid var(--linea-fuerte);
+    background: rgba(9,9,11,.5); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  }
+  .stat { padding: 24px 30px; position: relative; }
+  .stat + .stat::before { content: ''; position: absolute; left: 0; top: 18%; bottom: 18%; width: 1px; background: var(--linea-fuerte); }
+  .stat strong { display: block; font-size: 27px; font-weight: 700; letter-spacing: -.02em; color: var(--hueso); margin-bottom: 2px; }
+  .stat span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; color: rgba(250,250,250,.72); line-height: 1.5; display: block; text-transform: uppercase; }
+
+  .scroll-cue {
+    position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); z-index: 4;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(250,250,250,.65); font-family: var(--mono); font-size: 10px; letter-spacing: .28em; text-transform: uppercase;
+    text-decoration: none; transition: color .3s;
+  }
+  .scroll-cue:hover { color: var(--ambar); }
+  .scroll-cue .line { width: 1px; height: 40px; background: linear-gradient(180deg, var(--ambar), transparent); animation: cue 2.2s var(--ease) infinite; }
+  @keyframes cue { 0% { transform: scaleY(.2); transform-origin: top; opacity: 0; } 40% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(.2); transform-origin: bottom; opacity: 0; } }
+
+  /* ============ SECCIONES ============ */
+  section { padding: clamp(88px, 10vw, 128px) 0; position: relative; }
+  section + section { border-top: 1px solid var(--linea); }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--ambar); margin-bottom: 22px;
+  }
+  .eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--ambar); }
+  h2.section-title {
+    font-size: clamp(1.9rem, 3.6vw, 2.9rem); font-weight: 700; line-height: 1.06; letter-spacing: -.025em;
+    margin-bottom: 20px; max-width: 780px; color: var(--hueso); text-wrap: balance;
+  }
+  h2.section-title em { font-style: normal; color: var(--ambar); }
+  .section-intro { font-size: 1.02rem; color: var(--niebla); max-width: 700px; margin-bottom: 54px; line-height: 1.75; font-weight: 300; }
+
+  /* ============ DIAGNÓSTICO ============ */
+  .problems { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+  .problem {
+    padding: 32px 28px; border-radius: var(--r-md);
+    background: linear-gradient(165deg, rgba(226,84,63,.07), var(--carbon) 55%);
+    border: 1px solid rgba(226,84,63,.22);
+    transition: transform .35s var(--ease), border-color .35s, box-shadow .35s var(--ease);
+  }
+  .problem:hover { transform: translateY(-5px); border-color: rgba(226,84,63,.55); box-shadow: 0 22px 46px rgba(226,84,63,.1); }
+  .problem-icon {
+    position: relative; width: 46px; height: 46px; border-radius: 50%; margin-bottom: 22px;
+    display: grid; place-items: center; color: var(--dolor);
+    background: var(--dolor-soft); border: 1px solid rgba(226,84,63,.35);
+  }
+  .problem-icon svg { width: 21px; height: 21px; }
+  .problem-icon::after {
+    content: ''; position: absolute; inset: -1px; border-radius: 50%;
+    border: 1px solid rgba(226,84,63,.45);
+    animation: pain-pulse 2.6s ease-out infinite;
+  }
+  .problem:nth-child(2) .problem-icon::after { animation-delay: .5s; }
+  .problem:nth-child(3) .problem-icon::after { animation-delay: 1s; }
+  @keyframes pain-pulse {
+    0% { transform: scale(1); opacity: .6; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+  .problem-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--dolor); display: block; margin-bottom: 8px; }
+  .problem h3 { font-size: 1.12rem; font-weight: 700; letter-spacing: -.015em; margin-bottom: 10px; color: var(--hueso); }
+  .problem p { font-size: .94rem; color: var(--niebla); line-height: 1.7; font-weight: 300; }
+  @media (prefers-reduced-motion: reduce) {
+    .problem-icon::after { animation: none; }
+  }
+  .bridge {
+    margin-top: 48px; padding: 44px 40px; border-radius: var(--r-lg);
+    border: 1px solid rgba(245,151,21,.35);
+    background: linear-gradient(135deg, rgba(245,151,21,.12), rgba(245,151,21,.02));
+    text-align: center;
+  }
+  .bridge h3 {
+    font-size: clamp(1.5rem, 2.8vw, 2.15rem); font-weight: 700; letter-spacing: -.025em;
+    line-height: 1.15; color: var(--hueso); margin: 0 auto 14px; max-width: 640px; text-wrap: balance;
+  }
+  .bridge h3 em { font-style: normal; color: var(--ambar); }
+  .bridge p { font-size: 1.05rem; font-weight: 300; color: var(--niebla); margin: 0 auto 28px; max-width: 520px; }
+  .bridge .btn { padding: 15px 30px; font-size: 14px; }
+
+  /* ============ FORMATOS ============ */
+  .formats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+  .format {
+    padding: 34px 30px; background: var(--carbon); border: 1px solid var(--linea);
+    border-radius: var(--r-lg); position: relative; overflow: hidden;
+    transition: transform .4s var(--ease), border-color .4s, box-shadow .4s var(--ease);
+    transform-style: preserve-3d; will-change: transform;
+  }
+  .format:hover { border-color: rgba(245,151,21,.45); box-shadow: 0 22px 50px rgba(0,0,0,.4); }
+  .format:not(:hover) { transition: transform .6s var(--ease), border-color .4s, box-shadow .4s var(--ease); }
+  .format-glare {
+    position: absolute; inset: 0; pointer-events: none; z-index: 1;
+    opacity: 0; transition: opacity .4s ease;
+  }
+  .format:hover .format-glare { opacity: 1; }
+  .format-icon {
+    width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 24px;
+    background: rgba(245,151,21,.12); color: var(--ambar); border: 1px solid rgba(245,151,21,.28);
+    position: relative; overflow: visible; transition: transform .4s var(--ease), background .4s;
+  }
+  .format-icon svg { width: 23px; height: 23px; position: relative; z-index: 1; }
+  .format-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ambar); display: block; margin-bottom: 10px; }
+  .format h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -.02em; margin-bottom: 12px; color: var(--hueso); }
+  .format p { font-size: .94rem; color: var(--niebla); line-height: 1.72; font-weight: 300; }
+
+  /* Cámara: destello de disparo al hover */
+  .format-camera .format-icon::before {
+    content: ''; position: absolute; inset: 0; border-radius: inherit;
+    background: var(--ambar); opacity: 0; transform: scale(.4);
+    transition: opacity .12s ease, transform .12s ease;
+  }
+  .format-camera:hover .format-icon::before { animation: shutter-flash .55s ease; }
+  .format-camera:hover .format-icon { transform: scale(1.08); background: rgba(245,151,21,.18); }
+  @keyframes shutter-flash {
+    0% { opacity: 0; transform: scale(.4); }
+    18% { opacity: .9; transform: scale(1); }
+    45% { opacity: 0; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1); }
+  }
+
+  /* Reels: barras de progreso tipo historias */
+  .format-reel .format-icon { overflow: hidden; }
+  .reel-bars {
+    position: absolute; left: 50%; top: 7px; transform: translateX(-50%);
+    display: flex; gap: 3px; z-index: 2;
+  }
+  .reel-bars i {
+    width: 6px; height: 2px; border-radius: 1px; background: rgba(245,151,21,.35);
+    transition: background .25s ease;
+  }
+  .format-reel:hover .reel-bars i { animation: reel-fill 1.4s ease infinite; }
+  .format-reel:hover .reel-bars i:nth-child(1) { animation-delay: 0s; }
+  .format-reel:hover .reel-bars i:nth-child(2) { animation-delay: .22s; }
+  .format-reel:hover .reel-bars i:nth-child(3) { animation-delay: .44s; }
+  @keyframes reel-fill { 0%, 100% { background: rgba(245,151,21,.35); } 40% { background: var(--ambar); } }
+  .format-reel:hover .format-icon svg { animation: reel-pulse 1.4s var(--ease) infinite; }
+  @keyframes reel-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+  .format-reel .format-icon::after {
+    content: ''; position: absolute; inset: 0; border-radius: inherit;
+    border: 1px solid var(--ambar); opacity: 0; transform: scale(1);
+  }
+  .format-reel:hover .format-icon::after { animation: reel-ripple 1.4s ease infinite; }
+  @keyframes reel-ripple {
+    0% { opacity: .6; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.55); }
+  }
+
+  /* Recorrido: el punto orbita, el plano no se detiene */
+  .format-tour .format-icon::after {
+    content: ''; position: absolute; inset: -9px; border-radius: 50%;
+    background: radial-gradient(circle 2.6px at 50% 3px, var(--ambar) 97%, transparent 100%);
+    opacity: .8; animation: orbit 5s linear infinite;
+  }
+  .format-tour:hover .format-icon::after { animation-duration: 1.6s; }
+  .format-tour:hover .format-icon svg { animation: tour-tilt .9s var(--ease); }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes tour-tilt {
+    0%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(-8deg); }
+    65% { transform: rotate(6deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .format-tour .format-icon::after { animation: none; }
+  }
+
+  /* ============ TRABAJO / PRUEBA ============ */
+  /* Galería primero y en grande: el entregable principal son las fotos */
+  .gallery-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
+  .gallery-head h3 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 600; letter-spacing: -.02em; color: var(--hueso); }
+  .gallery-head p { font-size: .94rem; color: var(--niebla); margin-top: 6px; font-weight: 300; }
+  .gallery-hint { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ambar); white-space: nowrap; }
+  .photo-gallery { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 14px; }
+  .photo-slot {
+    border-radius: var(--r-md); overflow: hidden; position: relative;
+    background: var(--carbon); border: 1px solid var(--linea);
+    cursor: zoom-in; padding: 0;
+    transition: transform .35s var(--ease), border-color .35s, box-shadow .35s var(--ease);
+  }
+  /* Ritmo editorial: horizontales anchas, verticales estrechas */
+  .photo-slot:nth-child(1) { grid-column: span 4; aspect-ratio: 3/2; }
+  .photo-slot:nth-child(2) { grid-column: span 2; aspect-ratio: 3/4; }
+  .photo-slot:nth-child(3) { grid-column: span 3; aspect-ratio: 4/3; }
+  .photo-slot:nth-child(4) { grid-column: span 3; aspect-ratio: 4/3; }
+  .photo-slot:nth-child(5) { grid-column: span 2; aspect-ratio: 3/4; }
+  .photo-slot:nth-child(6) { grid-column: span 4; aspect-ratio: 3/2; }
+  .photo-slot:hover { transform: translateY(-4px); border-color: rgba(245,151,21,.5); box-shadow: 0 18px 44px rgba(0,0,0,.45); }
+  .photo-slot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s var(--ease); }
+  .photo-slot:hover img { transform: scale(1.05); }
+  .photo-slot::after {
+    content: '+'; position: absolute; right: 12px; bottom: 12px; width: 32px; height: 32px;
+    display: grid; place-items: center; border-radius: 50%; font-size: 19px; font-weight: 300;
+    background: rgba(9,9,11,.7); color: var(--ambar); border: 1px solid rgba(245,151,21,.4);
+    opacity: 0; transition: opacity .3s; pointer-events: none;
+  }
+  .photo-slot:hover::after { opacity: 1; }
+
+  .reels-head { margin-top: clamp(72px, 8vw, 104px); }
+  .projects { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px; align-items: start; }
+  .project { display: flex; flex-direction: column; }
+  .project-video {
+    border-radius: var(--r-md); overflow: hidden; position: relative;
+    background: #000; border: 1px solid var(--linea-fuerte);
+    max-width: 330px; width: 100%; margin: 0 auto 20px;
+    transition: transform .4s var(--ease), border-color .4s, box-shadow .4s var(--ease);
+  }
+  .project:hover .project-video { transform: translateY(-6px); border-color: rgba(245,151,21,.5); box-shadow: 0 24px 60px rgba(0,0,0,.5), 0 0 44px rgba(245,151,21,.08); }
+  .project-video iframe {
+    width: 100%; aspect-ratio: 9/16; height: auto; border: 0; display: block;
+    transform: scale(1.2); transform-origin: 50% 50%;
+  }
+  .project-meta { text-align: center; max-width: 330px; margin: 0 auto; }
+  .project-client { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ambar); margin-bottom: 8px; }
+  .project-title { font-size: 1.14rem; font-weight: 600; letter-spacing: -.015em; margin-bottom: 16px; color: var(--hueso); }
+  .project-metrics { display: flex; gap: 10px; margin: 0 0 14px; }
+  .project-metric {
+    flex: 1 1 0; min-width: 0; padding: 12px 8px; border-radius: 12px;
+    background: rgba(245,151,21,.07); border: 1px solid rgba(245,151,21,.25);
+  }
+  .project-metric strong { display: block; font-size: 1.2rem; font-weight: 700; letter-spacing: -.02em; color: var(--ambar); line-height: 1.05; }
+  .project-metric span { display: block; font-family: var(--mono); font-size: 8px; letter-spacing: .06em; text-transform: uppercase; color: var(--niebla-2); margin-top: 5px; line-height: 1.35; }
+  .project-desc { font-size: .88rem; color: var(--niebla); line-height: 1.6; font-weight: 300; }
+  .project-desc strong { color: var(--hueso); font-weight: 600; }
+
+  /* Pieza secundaria: el recorrido interior es horizontal y necesita ancho */
+  .project-feature { display: grid; grid-template-columns: 1.45fr 1fr; gap: 32px; align-items: center; margin-top: clamp(48px, 6vw, 68px); }
+  .project-feature .project-video { max-width: 100%; margin: 0; }
+  .project-feature .project-video iframe { aspect-ratio: 16/9; transform: scale(1.02); }
+  .project-feature-meta { text-align: left; }
+  .project-feature-meta .project-title { font-size: 1.45rem; font-weight: 700; letter-spacing: -.025em; margin-bottom: 14px; }
+  .project-feature-meta .project-desc { font-size: .95rem; line-height: 1.7; }
+
+  /* ============ TESTIMONIO ============ */
+  .quote-block { text-align: center; max-width: 800px; margin: 0 auto; }
+  .quote-stars {
+    display: inline-flex; gap: 6px; margin: 0 auto 28px; color: var(--ambar);
+  }
+  .quote-stars svg { width: 22px; height: 22px; }
+  .quote-stars svg { animation: star-pop .5s var(--ease) both; }
+  .quote-stars svg:nth-child(1) { animation-delay: .05s; }
+  .quote-stars svg:nth-child(2) { animation-delay: .13s; }
+  .quote-stars svg:nth-child(3) { animation-delay: .21s; }
+  .quote-stars svg:nth-child(4) { animation-delay: .29s; }
+  .quote-stars svg:nth-child(5) { animation-delay: .37s; }
+  @keyframes star-pop { 0% { opacity: 0; transform: scale(.4) rotate(-18deg); } 100% { opacity: 1; transform: none; } }
+  .quote-block blockquote p {
+    font-size: clamp(1.35rem, 2.6vw, 1.85rem); font-weight: 500; letter-spacing: -.02em;
+    line-height: 1.4; color: var(--hueso); margin-bottom: 30px; text-wrap: balance;
+  }
+  .quote-block blockquote p::before { content: '“'; color: var(--ambar); }
+  .quote-block blockquote p::after { content: '”'; color: var(--ambar); }
+  .quote-author strong { display: block; font-size: 1rem; font-weight: 600; color: var(--hueso); margin-bottom: 4px; }
+  .quote-author span { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--niebla-2); }
+
+  /* ============ PROGRAMAS ============ */
+  .offer { background: linear-gradient(180deg, var(--negro) 0%, var(--brasa) 38%, var(--negro) 100%); }
+  .offer::before {
+    content: ''; position: absolute; top: 20%; left: 50%; transform: translateX(-50%);
+    width: 720px; height: 520px; border-radius: 50%; pointer-events: none;
+    background: radial-gradient(circle, rgba(245,151,21,.1), transparent 65%);
+  }
+  .programs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; align-items: stretch; position: relative; }
+  .program {
+    background: var(--carbon); padding: 38px 30px 30px; border: 1px solid var(--linea);
+    border-radius: var(--r-lg); position: relative;
+    display: flex; flex-direction: column;
+    transition: transform .35s var(--ease), border-color .35s, box-shadow .35s var(--ease);
+  }
+  .program:hover { transform: translateY(-5px); border-color: rgba(245,151,21,.4); }
+  .program.featured {
+    background: linear-gradient(180deg, #1a1409 0%, var(--carbon) 60%);
+    border: 1px solid rgba(245,151,21,.65);
+    box-shadow: 0 24px 70px rgba(0,0,0,.5), 0 0 60px rgba(245,151,21,.1);
+    transform: translateY(-10px);
+  }
+  .program.featured:hover { transform: translateY(-15px); border-color: var(--ambar); }
+  .program-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--ambar); color: var(--negro);
+    padding: 7px 18px; font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700;
+    border-radius: 9999px; white-space: nowrap; box-shadow: 0 10px 26px rgba(245,151,21,.35);
+  }
+  .program-num { font-family: var(--mono); font-size: 10px; color: var(--ambar); letter-spacing: .2em; text-transform: uppercase; margin-bottom: 16px; }
+  .program-name { font-size: 1.5rem; font-weight: 700; letter-spacing: -.025em; color: var(--hueso); margin-bottom: 8px; }
+  .program-tagline { font-size: .92rem; color: var(--niebla); margin-bottom: 24px; line-height: 1.55; font-weight: 300; }
+  .program-price-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .program-price { font-size: 2.5rem; font-weight: 700; letter-spacing: -.03em; color: var(--hueso); line-height: 1; }
+  .program-price-note { font-family: var(--mono); font-size: 11px; color: var(--niebla-2); }
+  .program-chip {
+    display: inline-block; margin-top: 12px; padding: 5px 12px; border-radius: 9999px;
+    background: rgba(245,151,21,.12); border: 1px solid rgba(245,151,21,.4);
+    font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ambar);
+    align-self: flex-start;
+  }
+  .program-desc { font-size: .93rem; color: var(--niebla); line-height: 1.7; font-weight: 300; margin: 20px 0 22px; padding-bottom: 22px; border-bottom: 1px solid var(--linea); }
+  .program h4 { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ambar); margin: 20px 0 12px; }
+  .program ul { list-style: none; }
+  .program li { font-size: .92rem; color: var(--niebla); padding: 5px 0 5px 26px; position: relative; line-height: 1.55; font-weight: 300; }
+  .program li::before {
+    content: ''; position: absolute; left: 0; top: 9px; width: 14px; height: 14px;
+    background-color: var(--ambar);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;
+  }
+  .program-footer { margin-top: auto; padding-top: 22px; font-size: .8rem; color: var(--niebla-2); line-height: 1.6; font-weight: 300; }
+  .program-cta { margin-top: 18px; width: 100%; padding: 15px 20px; font-size: 14px; }
+  .program-cta.ghost { background: transparent; color: var(--hueso); border: 1px solid var(--linea-fuerte); box-shadow: none; }
+  .program-cta.ghost:hover { background: rgba(250,250,250,.06); border-color: rgba(245,151,21,.6); transform: translateY(-2px); }
+
+  .upgrade-note {
+    margin-top: 34px; padding: 22px 28px; border-radius: var(--r-md);
+    background: rgba(245,151,21,.07); border: 1px dashed rgba(245,151,21,.45);
+    display: flex; gap: 16px; align-items: flex-start; position: relative;
+  }
+  .upgrade-note svg { width: 22px; height: 22px; color: var(--ambar); flex-shrink: 0; margin-top: 2px; }
+  .upgrade-note p { font-size: .93rem; color: var(--niebla); line-height: 1.65; margin: 0; font-weight: 300; }
+  .upgrade-note strong { display: block; color: var(--hueso); font-weight: 600; font-size: 1rem; margin-bottom: 6px; }
+
+  .assurance { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; margin-top: 20px; position: relative; }
+  .assurance-item {
+    display: flex; align-items: center; gap: 14px; padding: 18px 22px;
+    background: var(--carbon); border: 1px solid var(--linea); border-radius: var(--r-md);
+  }
+  .assurance-item svg { width: 22px; height: 22px; color: var(--ambar); flex-shrink: 0; }
+  .assurance-item span { font-size: .85rem; color: var(--niebla); line-height: 1.5; font-weight: 300; }
+  .assurance-item strong { color: var(--hueso); font-weight: 600; display: block; font-size: .89rem; }
+
+  /* ============ PILARES ============ */
+  .benefits-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+  .benefit {
+    padding: 30px; border-radius: var(--r-lg);
+    background: var(--carbon); border: 1px solid var(--linea);
+    display: flex; gap: 20px; align-items: flex-start;
+    transition: transform .35s var(--ease), border-color .35s;
+  }
+  .benefit:hover { transform: translateY(-4px); border-color: rgba(245,151,21,.4); }
+  .benefit-icon {
+    width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; flex-shrink: 0;
+    background: rgba(245,151,21,.12); color: var(--ambar); border: 1px solid rgba(245,151,21,.28);
+  }
+  .benefit-icon svg { width: 21px; height: 21px; }
+  .benefit h3 { font-size: 1.08rem; font-weight: 600; letter-spacing: -.015em; color: var(--hueso); margin-bottom: 8px; }
+  .benefit p { font-size: .93rem; color: var(--niebla); line-height: 1.7; font-weight: 300; }
+
+  /* ============ PROCESO ============ */
+  .steps { max-width: 720px; margin: 0 auto; position: relative; padding-left: 8px; }
+  .steps::before { content: ''; position: absolute; left: 29px; top: 30px; bottom: 30px; width: 2px; border-radius: 2px; background: rgba(245,151,21,.15); }
+  .steps-fill {
+    position: absolute; left: 29px; top: 30px; width: 2px; height: 0; border-radius: 2px;
+    background: linear-gradient(180deg, var(--ambar), var(--ambar-claro));
+    box-shadow: 0 0 12px rgba(245,151,21,.5);
+    will-change: height;
+  }
+  .steps-fill::after {
+    content: ''; position: absolute; left: 50%; bottom: -3px; transform: translateX(-50%);
+    width: 8px; height: 8px; border-radius: 50%; background: var(--ambar);
+    box-shadow: 0 0 0 4px rgba(245,151,21,.2), 0 0 14px rgba(245,151,21,.7);
+    opacity: 0; transition: opacity .3s;
+  }
+  .steps-fill.on::after { opacity: 1; }
+  .step { display: flex; gap: 26px; align-items: flex-start; padding: 24px 0; position: relative; }
+  .step-num {
+    width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; z-index: 1;
+    display: grid; place-items: center;
+    font-family: var(--mono); font-size: 12px; color: rgba(245,151,21,.55);
+    background: var(--negro); border: 1px solid rgba(245,151,21,.35);
+    transition: color .4s var(--ease), border-color .4s var(--ease), background .4s var(--ease), box-shadow .4s var(--ease), transform .4s var(--ease);
+  }
+  .step.active .step-num {
+    color: var(--negro); font-weight: 700; background: var(--ambar); border-color: var(--ambar);
+    box-shadow: 0 0 22px rgba(245,151,21,.45); transform: scale(1.08);
+  }
+  .step-body { padding-top: 8px; }
+  .step-body h3 { font-size: 1.06rem; font-weight: 600; letter-spacing: -.015em; color: var(--hueso); margin-bottom: 4px; transition: color .4s; }
+  .step-body p { font-size: .93rem; color: var(--niebla); font-weight: 300; }
+
+  /* ============ QUIÉN SOY ============ */
+  .about-grid { display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: start; }
+  .about-portrait-wrap { position: relative; }
+  .about-portrait-wrap::before {
+    content: ''; position: absolute; inset: 16px -16px -16px 16px; border-radius: var(--r-lg);
+    border: 1px solid rgba(245,151,21,.5); pointer-events: none;
+  }
+  .about-portrait {
+    aspect-ratio: 3/4; border-radius: var(--r-lg); position: relative; overflow: hidden;
+    background: var(--carbon) center/cover no-repeat;
+    border: 1px solid var(--linea-fuerte);
+  }
+  .about-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(9,9,11,.5) 100%); pointer-events: none; }
+  .portrait-caption {
+    position: absolute; left: 18px; bottom: 16px; z-index: 1; color: var(--hueso);
+    font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+  }
+  .about-body p { font-size: .98rem; color: var(--niebla); margin-bottom: 18px; line-height: 1.85; font-weight: 300; }
+  .about-body p strong { color: var(--hueso); font-weight: 600; }
+  .about-body .about-statement {
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem); font-weight: 400; line-height: 1.4; letter-spacing: -.015em;
+    color: var(--hueso); margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--linea);
+  }
+  .about-body .about-statement strong { font-weight: 600; color: var(--ambar); }
+  .credentials { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 30px; }
+  .credential {
+    padding: 20px; background: var(--carbon); border: 1px solid var(--linea);
+    border-radius: var(--r-md); position: relative;
+  }
+  .credential::before { content: ''; position: absolute; top: 0; left: 20px; width: 30px; height: 2px; background: var(--ambar); }
+  .credential-label { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ambar); margin-bottom: 8px; }
+  .credential-value { font-size: .92rem; color: var(--hueso); font-weight: 500; line-height: 1.5; }
+
+  /* ============ FAQ ============ */
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--linea); }
+  .faq-item summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    padding: 24px 4px; font-size: 1.05rem; font-weight: 600; letter-spacing: -.01em; color: var(--hueso);
+    transition: color .25s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--ambar); }
+  .faq-icon {
+    width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; position: relative;
+    border: 1px solid rgba(245,151,21,.45); transition: transform .35s var(--ease), background .3s;
+  }
+  .faq-icon::before, .faq-icon::after {
+    content: ''; position: absolute; top: 50%; left: 50%; background: var(--ambar);
+    transition: background .3s;
+  }
+  .faq-icon::before { width: 12px; height: 1.5px; transform: translate(-50%,-50%); }
+  .faq-icon::after { width: 1.5px; height: 12px; transform: translate(-50%,-50%); }
+  .faq-item[open] .faq-icon { transform: rotate(45deg); background: var(--ambar); }
+  .faq-item[open] .faq-icon::before, .faq-item[open] .faq-icon::after { background: var(--negro); }
+  .faq-a { padding: 0 44px 26px 4px; font-size: .96rem; color: var(--niebla); line-height: 1.75; max-width: 680px; font-weight: 300; }
+
+  /* ============ CTA FINAL — GOLDEN HOUR ============ */
+  .cta-final {
+    background: linear-gradient(160deg, #f8bd64 0%, var(--ambar) 45%, #df830c 100%);
+    color: var(--negro); padding: clamp(100px, 12vw, 150px) 0; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-final::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .35; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  }
+  .cta-final .wrap { position: relative; z-index: 1; }
+  .cta-eyebrow { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: rgba(9,9,11,.82); margin-bottom: 24px; }
+  .cta-final h2 {
+    font-size: clamp(2.1rem, 4vw, 3.4rem); font-weight: 700; letter-spacing: -.03em;
+    line-height: 1.05; margin: 0 auto 20px; max-width: 840px; text-wrap: balance; color: var(--negro);
+  }
+  .cta-final h2 .blanco { color: var(--hueso); }
+  .cta-sub { font-size: 1.05rem; color: rgba(9,9,11,.75); max-width: 560px; margin: 0 auto 42px; line-height: 1.7; font-weight: 400; }
+  .cta-final .hero-actions { justify-content: center; margin-bottom: 0; }
+  .btn-negro {
+    background: var(--negro); color: var(--hueso); box-shadow: 0 14px 38px rgba(9,9,11,.35);
+  }
+  .btn-negro:hover { background: #1c1c21; box-shadow: 0 18px 48px rgba(9,9,11,.4); }
+
+  /* ============ FOOTER ============ */
+  .site-footer { background: var(--negro); color: var(--niebla-2); padding: 44px 0; font-size: .84rem; border-top: 1px solid var(--linea); }
+  .site-footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .footer-brand { display: flex; align-items: center; gap: 14px; }
+  .footer-brand img { height: 19px; width: auto; opacity: .92; }
+  .footer-brand span { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; }
+  .site-footer a { color: var(--niebla); text-decoration: none; transition: color .25s; }
+  .site-footer a:hover { color: var(--ambar); }
+  .footer-tc { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; }
+  .footer-right { display: flex; align-items: center; gap: 18px; }
+  .footer-ig {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid var(--linea); color: var(--niebla);
+    transition: color .25s, border-color .25s;
+  }
+  .footer-ig:hover { color: var(--ambar); border-color: rgba(245,151,21,.5); }
+  .footer-ig svg { width: 16px; height: 16px; }
+
+  /* ============ FAB WHATSAPP ============ */
+  .fab {
+    position: fixed; right: 26px; bottom: 26px; z-index: 70;
+    display: flex; align-items: center;
+    background: var(--ambar); color: var(--negro); text-decoration: none;
+    border-radius: 9999px; padding: 15px;
+    box-shadow: 0 16px 42px rgba(245,151,21,.4);
+    transform: translateY(120px); opacity: 0;
+    transition: transform .5s var(--ease), opacity .5s var(--ease), background .3s;
+  }
+  .fab.show { transform: translateY(0); opacity: 1; }
+  .fab:hover { background: var(--ambar-claro); }
+  .fab svg { width: 24px; height: 24px; flex-shrink: 0; }
+  .fab-label {
+    max-width: 0; overflow: hidden; white-space: nowrap;
+    font-size: 13px; font-weight: 700; letter-spacing: .01em;
+    transition: max-width .45s var(--ease), padding .45s var(--ease);
+  }
+  .fab:hover .fab-label { max-width: 200px; padding-left: 12px; padding-right: 4px; }
+
+  /* ============ LIGHTBOX ============ */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 90; display: none;
+    align-items: center; justify-content: center; padding: 5vh 5vw;
+    background: rgba(9,9,11,.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 90vh; border-radius: 12px; box-shadow: 0 40px 90px rgba(0,0,0,.6); }
+  .lb-close, .lb-prev, .lb-next {
+    position: absolute; width: 46px; height: 46px; border-radius: 50%;
+    background: rgba(250,250,250,.07); border: 1px solid var(--linea-fuerte); color: var(--hueso);
+    display: grid; place-items: center; cursor: pointer; font-size: 20px;
+    transition: background .25s, border-color .25s; -webkit-tap-highlight-color: transparent;
+  }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(245,151,21,.25); border-color: rgba(245,151,21,.5); }
+  .lb-close { top: 22px; right: 22px; }
+  .lb-prev { left: 18px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 18px; top: 50%; transform: translateY(-50%); }
+
+  /* ============ REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    .hero-photo.active { transform: none; }
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1020px) {
+    .formats, .problems, .programs, .projects, .credentials, .assurance, .project-feature { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .photo-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .photo-slot:nth-child(n) { grid-column: span 1; aspect-ratio: 4/3; }
+    .photo-slot:nth-child(2), .photo-slot:nth-child(5) { aspect-ratio: 3/4; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-portrait-wrap { max-width: 360px; }
+    .program.featured { transform: none; }
+    .program.featured:hover { transform: translateY(-5px); }
+    .project-video { max-width: 300px; }
+    .hero-stats { max-width: 100%; }
+    .hero-frame { display: none; }
+    .hero-counter { display: none; }
+  }
+  @media (max-width: 720px) {
+    .wrap, .wrap-narrow { padding: 0 22px; }
+    .topbar { padding: 14px 14px 0; }
+    .topbar-inner { padding: 10px 14px; border-radius: 9999px; }
+    .progress-track { left: 20px; right: 20px; }
+    .top-nav a:not(.top-cta) { display: none; }
+    .top-nav a.top-cta { margin-left: 0; padding: 10px 16px; }
+    .logo-word { display: none; }
+    .hero { min-height: auto; padding: 132px 0 96px; }
+    .hero-eyebrow { font-size: 9.5px; letter-spacing: .14em; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .btn { width: 100%; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .stat + .stat::before { left: 10%; right: 10%; top: 0; bottom: auto; width: auto; height: 1px; }
+    .scroll-cue { display: none; }
+    .photo-gallery { grid-template-columns: 1fr; }
+    .photo-slot:nth-child(n) { aspect-ratio: 4/3; }
+    .bridge { padding: 34px 24px; }
+    .bridge .btn { width: auto; }
+    .site-footer .wrap { flex-direction: column; align-items: flex-start; }
+    .fab { right: 18px; bottom: 18px; }
+    .faq-a { padding-right: 4px; }
+    .benefit { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  PROPUESTA VILLA — imagen profesional (fotografía como base + reels), sin tomas aéreas.
+  Para personalizar con el nombre de la villa: buscar «la vostra villa» y sustituir
+  por «Villa XXX» en el h1 del hero, en el eyebrow y en los mensajes de WhatsApp.
+-->
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="#" aria-label="Kulmen Visuals — inizio">
+      <span class="logo-mark"><img src="logos/KV__isotipo blanco.png" alt="Kulmen Visuals"></span>
+      <img class="logo-word" src="logos/KV__logotipo blanco.png" alt="Kulmen Visuals">
+    </a>
+    <nav class="top-nav" aria-label="Navigazione principale">
+      <a href="#scambio">Lo scambio</a>
+      <a href="#lavori">Portfolio</a>
+      <a href="#pacchetti">Pacchetti</a>
+      <a href="#chi-sono">Chi sono</a>
+      <a class="top-cta" data-wa data-wa-msg="Ciao Io Elena, ho visto la tua proposta per la nostra villa e mi piacerebbe parlarne." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.4-.7-2.9-1.1-4.7-4.1-4.8-4.3-.1-.2-1.2-1.5-1.2-2.9s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.3-.1.6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .2 0 .7-.3 1.3z"/></svg>
+        Parliamone
+      </a>
+    </nav>
+    <div class="progress-track" aria-hidden="true"><div class="progress" id="progress"></div></div>
+  </div>
+</header>
+
+<!-- ============ HERO / CARRUSEL FOTOGRÁFICO ============ -->
+<section class="hero" id="inizio">
+  <div class="hero-photos" id="heroPhotos" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <span class="hero-frame" aria-hidden="true"><i></i></span>
+  <span class="hero-counter" id="heroCounter" aria-hidden="true"></span>
+  <div class="wrap hero-content">
+    <div class="hero-eyebrow reveal">Collaborazione esclusiva · Sardegna</div>
+    <h1 class="reveal">Un'immagine all'altezza della vostra villa. <em>In cambio di un soggiorno.</em></h1>
+    <p class="lead reveal">Fotografia e reel di livello professionale: alzano la percezione della casa e la fanno scoprire a viaggiatori che oggi non sanno che esistete. Nessuna fattura, nessun pagamento: solo da una a tre notti di soggiorno.</p>
+    <div class="hero-actions reveal">
+      <a href="#pacchetti" class="btn">Scoprite i pacchetti <span class="arrow">→</span></a>
+    </div>
+    <div class="hero-stats reveal" role="list">
+      <div class="stat" role="listitem"><strong>Fino a 145</strong><span>contenuti pronti da pubblicare</span></div>
+      <div class="stat" role="listitem"><strong>0 €</strong><span>di investimento: solo il soggiorno</span></div>
+      <div class="stat" role="listitem"><strong>3 notti</strong><span>l'unica finestra: 30 ago – 2 set</span></div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#occasione" aria-label="Scendi alla sezione successiva">Scoprite<span class="line"></span></a>
+</section>
+
+<!-- ============ IL PROBLEMA / L'OCCASIONE ============ -->
+<section id="occasione">
+  <div class="wrap">
+    <span class="eyebrow reveal">Il punto di partenza</span>
+    <h2 class="section-title reveal">Anche le ville più belle perdono ospiti per <em>tre motivi</em></h2>
+    <p class="section-intro reveal">Avete una casa straordinaria. Ma su Booking, su Airbnb e su Instagram l'ospite non vede la villa: vede l'immagine che ne date. E se quell'immagine non è all'altezza, la decisione si prende comunque — solo che non a vostro favore.</p>
+
+    <div class="problems">
+      <div class="problem reveal">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+        </div>
+        <span class="problem-kicker">Percezione e tariffa</span>
+        <h3>Un'immagine che non rende giustizia</h3>
+        <p>Quando l'immagine non è all'altezza della casa, l'ospite confronta sul prezzo e tratta. Quando lo è, prenota convinto che alla tariffa pubblicata sia già un affare.</p>
+      </div>
+      <div class="problem reveal">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 10 8 10 8a13.16 13.16 0 0 1-1.67 2.68M6.61 6.61A13.53 13.53 0 0 0 2 12s3 8 10 8a9.74 9.74 0 0 0 5.39-1.61M14.12 14.12a3 3 0 1 1-4.24-4.24"/><path d="M2 2l20 20"/></svg>
+        </div>
+        <span class="problem-kicker">Visibilità</span>
+        <h3>Invisibili ai nuovi viaggiatori</h3>
+        <p>I contenuti standard non si condividono, non si salvano, non viaggiano. Vi trova solo chi vi stava già cercando: tutto il resto del mondo scorre oltre.</p>
+      </div>
+      <div class="problem reveal">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2.5"/><path d="M16 2v4M8 2v4M3 10h18M10 14l4 4M14 14l-4 4"/></svg>
+        </div>
+        <span class="problem-kicker">Differenziazione</span>
+        <h3>Contenuti uguali a tutti</h3>
+        <p>Stesse stanze dagli stessi angoli, stessa luce piatta dei competitor. Se le immagini sono intercambiabili, agli occhi dell'ospite lo è anche la villa.</p>
+      </div>
+    </div>
+
+    <div class="bridge reveal">
+      <h3>Tutti e tre si risolvono con immagini straordinarie. <em>E in questo caso, senza spendere un euro.</em></h3>
+      <p>Vi spiego come funziona lo scambio.</p>
+      <a href="#scambio" class="btn">Come funziona <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LO SCAMBIO ============ -->
+<section id="scambio">
+  <div class="wrap">
+    <span class="eyebrow reveal">Come funziona</span>
+    <h2 class="section-title reveal">Uno scambio semplice, <em>alla pari</em></h2>
+    <p class="section-intro reveal">Niente budget da approvare, niente contratti complicati. Io metto la produzione completa; voi mettete una camera che, in quelle date, sarebbe rimasta comunque vuota.</p>
+
+    <div class="formats">
+      <div class="format reveal">
+        <span class="format-glare" aria-hidden="true"></span>
+        <div class="format-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2.5"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <span class="format-kicker">Passo 01 · Voi offrite</span>
+        <h3>Da 1 a 3 notti di soggiorno</h3>
+        <p>Le notti concordate all'interno della mia finestra di viaggio: dal 30 agosto al 2 settembre 2026. Il costo reale per la villa è vicino allo zero.</p>
+      </div>
+      <div class="format format-camera reveal">
+        <span class="format-glare" aria-hidden="true"></span>
+        <div class="format-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <span class="format-kicker">Passo 02 · Io produco</span>
+        <h3>Riprese durante il soggiorno</h3>
+        <p>Fotografia e video, pianificati al minuto seguendo la luce: stanze, dettagli, esterni ed esperienza dell'ospite. Zero disturbo per i vostri clienti.</p>
+      </div>
+      <div class="format reveal">
+        <span class="format-glare" aria-hidden="true"></span>
+        <div class="format-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        </div>
+        <span class="format-kicker">Passo 03 · Voi ricevete</span>
+        <h3>Contenuti pronti da pubblicare</h3>
+        <p>Foto e video editati e consegnati in 10 giorni lavorativi, con diritti d'uso completi e perpetui: sito web, social, Booking, Airbnb, stampa.</p>
+      </div>
+    </div>
+
+    <div class="bridge reveal">
+      <h3>Una produzione che di norma si commissiona a un'agenzia. <em>Per voi, il costo marginale di una camera.</em></h3>
+      <p>Notti che in quelle date sarebbero rimaste comunque vuote. Questo è tutto.</p>
+      <a href="#pacchetti" class="btn">Guardate i pacchetti <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COSA PRODUCO ============ -->
+<section id="formati">
+  <div class="wrap">
+    <span class="eyebrow reveal">Cosa produco</span>
+    <h2 class="section-title reveal">Tre formati, <em>un'unica immagine di marca</em></h2>
+    <p class="section-intro reveal">Ognuno ha un compito preciso: c'è quello che alza la percezione della casa, quello che porta pubblico nuovo e quello che convince chi è appena arrivato sul vostro sito. Insieme coprono l'intero percorso dell'ospite.</p>
+
+    <div class="formats">
+      <div class="format format-camera reveal">
+        <span class="format-glare" aria-hidden="true"></span>
+        <div class="format-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <span class="format-kicker">La base</span>
+        <h3>Fotografia professionale</h3>
+        <p>La prima cosa che un ospite vede su Booking, Airbnb, Google o Instagram. Ogni spazio ripreso nell'ora di luce giusta, con la composizione che lo fa sembrare ampio e vissuto. Immagini editate e ottimizzate per ogni piattaforma, pensate per sostenere tariffe più alte e spingere le prenotazioni dirette.</p>
+      </div>
+      <div class="format format-reel reveal">
+        <span class="format-glare" aria-hidden="true"></span>
+        <div class="format-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+          <span class="reel-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <span class="format-kicker">L'emozione</span>
+        <h3>Reel verticali</h3>
+        <p>Verticali, brevi, cinematografici: la luce del mattino che entra dalle finestre, la colazione, il tuffo, la porta che si apre sulla stanza. Il formato che fa scoprire la villa a chi non vi stava cercando, e che porta quel pubblico dritto alla vostra pagina di prenotazione.</p>
+      </div>
+      <div class="format format-tour reveal">
+        <span class="format-glare" aria-hidden="true"></span>
+        <div class="format-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/><path d="M3 21h18"/></svg>
+        </div>
+        <span class="format-kicker">La differenza</span>
+        <h3>Percorso in volo negli interni</h3>
+        <p>Un unico piano continuo che attraversa la casa da dentro: dall'ingresso al salone, dal salone alla camera, senza stacchi. In pochi secondi l'ospite capisce com'è fatta davvero la villa — la disposizione, le distanze, l'atmosfera — quello che venti fotografie separate non riescono a trasmettere. Incluso nel Pacchetto 03.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAVORI REALI ============ -->
+<section id="lavori">
+  <div class="wrap">
+    <span class="eyebrow reveal">Lavori reali</span>
+    <h2 class="section-title reveal">Immagini per <em>case che si affittano</em></h2>
+    <p class="section-intro reveal">Ho lavorato con strutture turistiche e agenzie immobiliari in Spagna. Ogni progetto parte da un obiettivo concreto: nel vostro caso, trasformare chi guarda in ospiti che prenotano.</p>
+
+    <div class="gallery-head reveal">
+      <div>
+        <h3>Il risultato, in immagini</h3>
+        <p>Interni, dettagli ed esterni per case in affitto.</p>
+      </div>
+      <span class="gallery-hint">Cliccate per ingrandire</span>
+    </div>
+    <div class="photo-gallery" id="photoGallery">
+      <button class="photo-slot reveal" type="button" aria-label="Ingrandisci fotografia 1"></button>
+      <button class="photo-slot reveal" type="button" aria-label="Ingrandisci fotografia 2"></button>
+      <button class="photo-slot reveal" type="button" aria-label="Ingrandisci fotografia 3"></button>
+      <button class="photo-slot reveal" type="button" aria-label="Ingrandisci fotografia 4"></button>
+      <button class="photo-slot reveal" type="button" aria-label="Ingrandisci fotografia 5"></button>
+      <button class="photo-slot reveal" type="button" aria-label="Ingrandisci fotografia 6"></button>
+    </div>
+
+    <div class="gallery-head reels-head reveal">
+      <div>
+        <h3>E i reel che portano pubblico nuovo</h3>
+        <p>Contenuti verticali per Instagram e TikTok.</p>
+      </div>
+    </div>
+    <div class="projects">
+      <div class="project reveal">
+        <div class="project-video">
+          <iframe src="https://player.vimeo.com/video/1210437296?autoplay=1&loop=1&muted=1&background=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Reel — Cabanas Ribeira Sacra"></iframe>
+        </div>
+        <div class="project-meta">
+          <div class="project-client">Cabanas Ribeira Sacra</div>
+          <div class="project-title">Produzione completa: foto + reel</div>
+          <div class="project-metrics">
+            <div class="project-metric"><strong>+500.000</strong><span>visualizzazioni</span></div>
+            <div class="project-metric"><strong>+4.500</strong><span>nuovi follower</span></div>
+          </div>
+          <p class="project-desc">In sole <strong>3 pubblicazioni</strong>. Produzione integrale: le immagini per sito e portali, più i reel per i social.</p>
+        </div>
+      </div>
+      <div class="project reveal">
+        <div class="project-video">
+          <iframe src="https://player.vimeo.com/video/1210443257?autoplay=1&loop=1&muted=1&background=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Reel — Villa Boutique 1880"></iframe>
+        </div>
+        <div class="project-meta">
+          <div class="project-client">Villa Boutique 1880</div>
+          <div class="project-title">Reel cinematografico</div>
+          <div class="project-metrics">
+            <div class="project-metric"><strong>+830</strong><span>condivisioni</span></div>
+            <div class="project-metric"><strong>+350</strong><span>salvataggi</span></div>
+          </div>
+          <p class="project-desc">Con un <strong>unico reel</strong> per una villa boutique di fascia alta.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-feature reveal">
+      <div class="project-video">
+        <iframe src="https://player.vimeo.com/video/1212461582?autoplay=1&loop=1&muted=1&background=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Percorso in volo — O Lagar de Jesus"></iframe>
+      </div>
+      <div class="project-feature-meta">
+        <div class="project-client">O Lagar de Jesus</div>
+        <div class="project-title">Percorso in volo, un piano unico</div>
+        <p class="project-desc">Nessuno stacco: dall'ingresso alle stanze, fino all'ultimo angolo. È il contenuto che trattiene chi arriva sulla vostra home invece di farlo tornare indietro, ed è ciò che i vostri competitor difficilmente possono replicare. <strong>Per la vostra villa il percorso resta all'interno della casa</strong>, dove questo formato dà il meglio di sé. Incluso nel Pacchetto 03.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIANZA ============ -->
+<section>
+  <div class="wrap-narrow">
+    <div class="quote-block reveal">
+      <span class="quote-stars" role="img" aria-label="Valutazione di 5 stelle su 5">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+      </span>
+      <blockquote>
+        <p>Un piacere averla al lavoro nella nostra struttura. Dei video bellissimi. Ci rivedremo di sicuro.</p>
+        <footer class="quote-author">
+          <strong>Miguel Álvarez</strong>
+          <span>Proprietario · Cabanas Ribeira Sacra</span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACCHETTI ============ -->
+<section class="offer" id="pacchetti">
+  <div class="wrap">
+    <span class="eyebrow reveal">I tre pacchetti</span>
+    <h2 class="section-title reveal">Scegliete in base <em>alle notti</em></h2>
+    <p class="section-intro reveal">Tre livelli di produzione, tre livelli di soggiorno. Ogni pacchetto è completo in sé: quello che ricevete è pronto da pubblicare dal primo giorno, senza altri costi e senza altri passaggi.</p>
+
+    <div class="programs">
+      <div class="program reveal">
+        <div class="program-num">Pacchetto 01</div>
+        <div class="program-name">Sguardo</div>
+        <div class="program-tagline">Il primo assaggio: abbastanza per vedere la differenza</div>
+        <div class="program-price-row"><span class="program-price">1 notte</span><span class="program-price-note">di soggiorno</span></div>
+        <span class="program-chip">Produzione · 1 giornata</span>
+        <p class="program-desc">Una produzione agile concentrata tra un pomeriggio e una mattina, seguendo le due ore di luce migliori della casa. Il modo più diretto per alzare subito il livello sui portali.</p>
+        <h4>Cosa ne ottenete</h4>
+        <ul class="aporta"><li>Una galleria nuova per Booking, Airbnb e sito</li><li>Differenziazione immediata rispetto alle ville della zona</li><li>Materiale per pubblicare con costanza per settimane</li></ul>
+        <h4>Include</h4>
+        <ul class="includes"><li>40 fotografie editate: stanze, dettagli ed esterni</li><li>1 reel verticale</li><li>Editing e color grading professionale</li><li>Diritti d'uso completi e perpetui</li></ul>
+        <div class="program-footer">Riprese realizzate durante il soggiorno. Consegna in 10 giorni lavorativi.</div>
+        <a class="btn program-cta ghost" data-wa data-wa-msg="Ciao Io Elena! Abbiamo una villa in Sardegna e ci interessa il Pacchetto 01 · Sguardo (1 notte). Quando possiamo parlarne?" href="#">Voglio provare</a>
+      </div>
+
+      <div class="program reveal">
+        <div class="program-num">Pacchetto 02</div>
+        <div class="program-name">Racconto</div>
+        <div class="program-tagline">La presenza visiva completa: sito, portali e social allineati</div>
+        <div class="program-price-row"><span class="program-price">2 notti</span><span class="program-price-note">di soggiorno</span></div>
+        <span class="program-chip">Produzione · 2 giornate</span>
+        <p class="program-desc">Due giornate piene di produzione per coprire tutta la casa in una sola visita: ogni stanza, la luce del mattino e quella del tramonto, e la vita dentro la villa.</p>
+        <h4>Cosa ne ottenete</h4>
+        <ul class="aporta"><li>Immagine rinnovata su sito, portali e social in un colpo solo</li><li>Ospiti che arrivano con aspettative premium e meno voglia di trattare</li><li>Più del doppio di materiale rispetto al Pacchetto 01</li></ul>
+        <h4>Include</h4>
+        <ul class="includes"><li>90 fotografie editate: tutte le stanze, dettagli ed esterni</li><li>3 reel verticali</li><li>Riprese in due momenti di luce: mattino e tramonto</li><li>Editing e color grading professionale</li><li>Diritti d'uso completi e perpetui</li></ul>
+        <div class="program-footer">Riprese realizzate durante il soggiorno. Consegna in 10 giorni lavorativi.</div>
+        <a class="btn program-cta ghost" data-wa data-wa-msg="Ciao Io Elena! Abbiamo una villa in Sardegna e ci interessa il Pacchetto 02 · Racconto (2 notti). Quando possiamo parlarne?" href="#">Voglio il salto di qualità</a>
+      </div>
+
+      <div class="program featured reveal">
+        <div class="program-badge">Consigliato · Massimo valore</div>
+        <div class="program-num">Pacchetto 03</div>
+        <div class="program-name">Dimora</div>
+        <div class="program-tagline">La produzione completa: un archivio di immagini per mesi</div>
+        <div class="program-price-row"><span class="program-price">3 notti</span><span class="program-price-note">di soggiorno</span></div>
+        <span class="program-chip">Produzione · 3 giornate</span>
+        <p class="program-desc">Tre giorni di produzione: ogni angolo della villa raccontato tra l'alba e il tramonto, l'esperienza dell'ospite messa in scena e il percorso in volo che mostra la casa per intero. Il pacchetto che trasforma la vostra immagine da bella a iconica.</p>
+        <h4>Cosa ne ottenete</h4>
+        <ul class="aporta"><li>Il valore più alto per notte di soggiorno</li><li>Un archivio di immagini per mesi di pubblicazioni</li><li>Tutte le stanze e tutti gli spazi coperti, senza lasciare fuori niente</li><li>La casa raccontata per intero con il percorso in volo</li></ul>
+        <h4>Include</h4>
+        <ul class="includes"><li>140 fotografie editate: stanze, dettagli, esterni ed esperienza</li><li>Percorso in volo negli interni della villa</li><li>5 reel verticali</li><li>Riprese in diversi momenti della giornata: alba e tramonto</li><li>Modella inclusa nelle foto dell'esperienza</li><li>Editing e color grading professionale</li><li>Diritti d'uso completi e perpetui</li></ul>
+        <div class="program-footer">Riprese realizzate durante il soggiorno. Consegna in 10 giorni lavorativi.</div>
+        <a class="btn program-cta" data-wa data-wa-msg="Ciao Io Elena! Abbiamo una villa in Sardegna e ci interessa il Pacchetto 03 · Dimora (3 notti). Quando possiamo parlarne?" href="#">Voglio il pacchetto completo <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="upgrade-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+      <p><strong>Disponibilità limitata: 3 notti in tutto.</strong>Questa non è una formula commerciale: è il tempo reale che ho in Sardegna, dal 30 agosto al 2 settembre. Chi conferma prima sceglie il pacchetto che preferisce, finché restano notti libere.</p>
+    </div>
+
+    <div class="assurance">
+      <div class="assurance-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+        <span><strong>Zero costi</strong>Nessuna fattura, nessun pagamento. Solo le notti concordate.</span>
+      </div>
+      <div class="assurance-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span><strong>Date confermate</strong>Dal 30 agosto al 2 settembre 2026. La notte del 2 non è inclusa.</span>
+      </div>
+      <div class="assurance-item reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span><strong>Diritti completi</strong>Uso perpetuo su sito, social, portali e stampa.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERCHÉ LO FACCIO ============ -->
+<section id="perche">
+  <div class="wrap-narrow">
+    <span class="eyebrow reveal">Parliamoci chiaro</span>
+    <h2 class="section-title reveal">Perché lavoro <em>in cambio di un soggiorno</em></h2>
+    <p class="section-intro reveal" style="margin-bottom: 28px;">Nessun trucco e nessuna clausola nascosta. Sto portando Kulmen Visuals nel Mediterraneo e voglio nel mio portfolio le case più belle della Sardegna: è così che si apre un mercato, con lavori veri in location straordinarie.</p>
+    <div class="bridge reveal" style="margin-top: 0;">
+      <h3>Voi ricevete un'immagine professionale completa, al costo marginale di una camera. <em>Io, una casa eccezionale da raccontare.</em></h3>
+      <p>Uno scambio in cui nessuno dei due perde. Per questo funziona.</p>
+      <a class="btn" data-wa data-wa-msg="Ciao Io Elena, la tua proposta per la nostra villa ci sembra interessante. Possiamo parlarne?" href="#">Verificate la disponibilità <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILASTRI ============ -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">I quattro pilastri</span>
+    <h2 class="section-title reveal">Cosa cambia con <em>un'immagine professionale</em></h2>
+    <div class="benefits-grid" style="margin-top: 44px;">
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6 3-6"/></svg></div>
+        <div><h3>Percezione all'altezza della tariffa</h3><p>Quando l'immagine è al livello della casa, l'ospite prenota convinto del valore, senza negoziare e senza confrontare solo sul prezzo.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l2-7 4 14 3-9 2 4h5"/></svg></div>
+        <div><h3>Pubblico nuovo ogni settimana</h3><p>Contenuti pensati per essere salvati e condivisi, che raggiungono viaggiatori che oggi non sanno nemmeno che esistete.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l18-9-6 18-3.5-7z"/></svg></div>
+        <div><h3>Più prenotazioni dirette</h3><p>Immagini che convertono sul vostro sito e riducono la dipendenza — e le commissioni — da Booking, Airbnb e dalle altre piattaforme.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M6 6c3 2 9 2 12 0M6 18c3-2 9-2 12 0"/></svg></div>
+        <div><h3>Un archivio per mesi</h3><p>Materiale sufficiente per pubblicare con costanza per mesi, senza dover improvvisare contenuti all'ultimo minuto.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section>
+  <div class="wrap-narrow">
+    <span class="eyebrow reveal">Il processo</span>
+    <h2 class="section-title reveal">Come lavoriamo, <em>passo dopo passo</em></h2>
+    <p class="section-intro reveal">Niente improvvisazione: ogni produzione viene pianificata sulla carta prima di iniziare a riprendere.</p>
+    <div class="steps" id="steps">
+      <div class="steps-fill" id="stepsFill" aria-hidden="true"></div>
+      <div class="step reveal"><div class="step-num">01</div><div class="step-body"><h3>Primo contatto</h3><p>Un messaggio o una breve chiamata per conoscere la villa e verificare le date disponibili.</p></div></div>
+      <div class="step reveal"><div class="step-num">02</div><div class="step-body"><h3>Piano di ripresa</h3><p>Elenco delle stanze e orario della luce, stanza per stanza, definiti prima del mio arrivo.</p></div></div>
+      <div class="step reveal"><div class="step-num">03</div><div class="step-body"><h3>Il soggiorno</h3><p>Riprese pianificate al minuto durante le notti concordate. Zero disturbo per i vostri ospiti.</p></div></div>
+      <div class="step reveal"><div class="step-num">04</div><div class="step-body"><h3>Post-produzione</h3><p>Ritocco professionale e color grading di ogni fotografia e di ogni reel.</p></div></div>
+      <div class="step reveal"><div class="step-num">05</div><div class="step-body"><h3>Consegna</h3><p>In 10 giorni lavorativi, tutto pronto da pubblicare.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHI SONO ============ -->
+<section id="chi-sono">
+  <div class="wrap">
+    <span class="eyebrow reveal">Chi c'è dietro</span>
+    <h2 class="section-title reveal">Io Elena · <em>Kulmen Visuals</em></h2>
+    <p class="section-intro reveal">Creatività al servizio del risultato.</p>
+    <div class="about-grid" style="margin-top: 44px;">
+      <div class="about-portrait-wrap reveal">
+        <div class="about-portrait" id="aboutPortrait">
+          <span class="portrait-caption">Io Elena · Direttrice creativa</span>
+        </div>
+      </div>
+      <div class="about-body reveal">
+        <p>Sono <strong>direttrice creativa</strong> specializzata nell'immagine di case in affitto, turismo e hospitality. Lavoro con il mio marchio, Kulmen Visuals, con base in Galizia (Spagna) — e una valigia sempre pronta per le location che meritano il viaggio.</p>
+        <p>Prima di specializzarmi nell'hospitality ho passato anni tra agenzie e case di produzione, osservando da vicino quali immagini muovono davvero una decisione d'acquisto e quali occupano solo spazio nel feed. È lo sguardo strategico che applico a ogni progetto: <strong>non cerco l'immagine bella, cerco l'immagine che fa prenotare</strong>. Tutto sotto un unico criterio: senza team esterni, senza subappalti, senza che l'idea si diluisca per strada.</p>
+        <p class="about-statement">L'immagine non è una decorazione: <strong>è ciò che decide se un viaggiatore prenota da voi o continua a scorrere</strong>.</p>
+        <div class="credentials">
+          <div class="credential reveal"><div class="credential-label">Specialità</div><div class="credential-value">Immagine di interni e architettura</div></div>
+          <div class="credential reveal"><div class="credential-label">Esperienza</div><div class="credential-value">Case di produzione cinematografica e agenzie di marketing</div></div>
+          <div class="credential reveal"><div class="credential-label">Settori</div><div class="credential-value">Turismo, hospitality e case di pregio</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap-narrow">
+    <span class="eyebrow reveal">Domande frequenti</span>
+    <h2 class="section-title reveal">Tutto il resto, <em>chiarito</em></h2>
+    <div class="faq-list reveal" style="margin-top: 44px;">
+      <details class="faq-item">
+        <summary>Quanto ci costa davvero?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Zero euro. Solo le notti di soggiorno concordate, all'interno della finestra dal 30 agosto al 2 settembre 2026. Il viaggio è a carico mio.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa deve includere il soggiorno?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Solo la camera. Se volete che la colazione, la piscina o altri servizi entrino nel racconto, basta includere l'accesso: è il modo migliore per poterli mostrare bene.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Sono previste riprese aeree della proprietà?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">In questa proposta no: il lavoro si concentra sugli spazi — interni, dettagli ed esterni ripresi da terra — e sui reel verticali. Il percorso in volo del Pacchetto 03 si svolge interamente all'interno della casa. È una scelta precisa: per una villa, sono le immagini degli ambienti a decidere la prenotazione, molto più di una veduta dall'alto.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa riceviamo esattamente?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Da 40 a 140 fotografie e da 1 a 5 reel, a seconda del pacchetto. Le immagini arrivano editate e in due formati: orizzontale per i portali e il sito, verticale e quadrato per i social. Sono selezionate una per una — vi consegno le migliori, non tutto il girato.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Dobbiamo preparare la casa?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Basta che le stanze siano pulite e in ordine come per l'arrivo di un ospite. Al resto — biancheria stirata a puntino, oggetti fuori posto, piccoli dettagli scenografici — penso io sul momento. Prima del mio arrivo vi mando una lista breve, niente di impegnativo.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Di chi sono le immagini?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Vostre, con diritti d'uso completi e perpetui per sito, social, portali e stampa. Io conservo i diritti di portfolio, cioè la possibilità di mostrare il lavoro come referenza.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Perché lavora in cambio di un soggiorno?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Sto costruendo il mio portfolio nel Mediterraneo e per questo viaggio seleziono poche case straordinarie. Voi ottenete un'immagine professionale completa, che di norma si commissiona a un'agenzia; io una location eccezionale da raccontare. Uno scambio alla pari.</div>
+      </details>
+      <details class="faq-item">
+        <summary>E se piove nei giorni concordati?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Poco male: la maggior parte del lavoro è al coperto. Riorganizziamo l'ordine delle riprese all'interno del soggiorno, spostando gli esterni nelle ore migliori di quei giorni. Preferisco riadattare il piano piuttosto che consegnarvi immagini mediocri.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo per la consegna?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">10 giorni lavorativi dalla fine delle riprese, tutto editato e pronto da pubblicare.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Quando sarà in Sardegna?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Sarò in Sardegna dal 30 agosto al 2 settembre 2026 — la notte del 2 non è inclusa. Tutte le riprese si organizzano all'interno di quella finestra, concordando insieme i momenti migliori per la vostra villa.</div>
+      </details>
+      <details class="faq-item">
+        <summary>E se volessimo di più?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <div class="faq-a">Se volete una produzione più ampia di quella prevista dai pacchetti, esiste un listino commerciale. Chiedetemelo senza impegno.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINALE — GOLDEN HOUR ============ -->
+<section class="cta-final">
+  <div class="wrap">
+    <span class="cta-eyebrow reveal">Il prossimo passo</span>
+    <h2 class="reveal">La vostra villa è già <span class="blanco">straordinaria</span>. Fatela vedere a chi ancora non la conosce.</h2>
+    <p class="cta-sub reveal">Un messaggio di due minuti basta per verificare le date e il pacchetto giusto. Senza impegno. Le notti disponibili sono tre: quando il calendario è pieno, è pieno.</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-negro" data-wa data-wa-msg="Ciao Io Elena, abbiamo visto la tua proposta per la nostra villa e vorremmo fare il prossimo passo." href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.4-.7-2.9-1.1-4.7-4.1-4.8-4.3-.1-.2-1.2-1.5-1.2-2.9s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.3-.1.6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .2 0 .7-.3 1.3z"/></svg>
+        Scrivetemi su WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="logos/KV__logotipo blanco.png" alt="Kulmen Visuals">
+      <span>· Pontevedra, Spagna</span>
+    </div>
+    <div><a href="mailto:hola@kulmenvisuals.com">hola@kulmenvisuals.com</a></div>
+    <div class="footer-right">
+      <span class="footer-tc">© 2026 KULMEN VISUALS</span>
+      <a class="footer-ig" href="https://www.instagram.com/kulmenvisuals/" target="_blank" rel="noopener" aria-label="Instagram di Kulmen Visuals">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FAB ============ -->
+<a class="fab" id="fab" data-wa data-wa-msg="Ciao Io Elena, ho visto la tua proposta per la nostra villa e mi piacerebbe parlarne." href="#" aria-label="Apri conversazione WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.4-.7-2.9-1.1-4.7-4.1-4.8-4.3-.1-.2-1.2-1.5-1.2-2.9s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.3-.1.6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .2 0 .7-.3 1.3z"/></svg>
+  <span class="fab-label">Parliamo della vostra villa?</span>
+</a>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore di fotografie">
+  <button class="lb-close" id="lbClose" aria-label="Chiudi">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Precedente">‹</button>
+  <img id="lbImg" src="" alt="Fotografia ingrandita">
+  <button class="lb-next" id="lbNext" aria-label="Successiva">›</button>
+</div>
+
+<script id="image-manifest" type="application/json">
+{
+  "portrait": "img/io-color.jpg",
+  "hero": [
+    "img/image-8.jpg",
+    "img/image-3.jpg",
+    "img/image-1.jpg",
+    "img/image-4.jpg"
+  ],
+  "gallery": [
+    "img/image-8.jpg",
+    "img/image-2.jpg",
+    "img/image-3.jpg",
+    "img/image-4.jpg",
+    "img/image-5.jpg",
+    "img/image-1.jpg"
+  ]
+}
+</script>
+<script>
+  // ---- Config: número de WhatsApp centralizado (cambiar aquí una sola vez) ----
+  const WA_NUMBER = '34652405654';
+
+  document.querySelectorAll('[data-wa]').forEach((el) => {
+    const msg = el.getAttribute('data-wa-msg') || 'Ciao Io Elena, ho visto la tua proposta per la nostra villa.';
+    el.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+    el.target = '_blank';
+    el.rel = 'noopener';
+  });
+
+  // ---- Manifiesto de imágenes ----
+  const manifestScript = document.getElementById('image-manifest');
+  let manifest = {};
+  try {
+    manifest = JSON.parse(manifestScript.textContent || '{}');
+  } catch (error) {
+    console.warn('No se pudo leer el manifiesto de imágenes:', error);
+  }
+  const galleryImages = Array.isArray(manifest.gallery) ? manifest.gallery.filter(Boolean) : [];
+  const heroImages = Array.isArray(manifest.hero) ? manifest.hero.filter(Boolean) : [];
+
+  // ---- Reveal on scroll con stagger por grupo ----
+  const groups = new Map();
+  document.querySelectorAll('.reveal').forEach((item) => {
+    const parent = item.parentElement;
+    if (!groups.has(parent)) groups.set(parent, 0);
+    const index = groups.get(parent);
+    item.style.transitionDelay = `${Math.min(index * 90, 450)}ms`;
+    groups.set(parent, index + 1);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+
+  // ---- Topbar: estado al hacer scroll + línea de progreso + FAB ----
+  const topbar = document.getElementById('topbar');
+  const progress = document.getElementById('progress');
+  const fab = document.getElementById('fab');
+
+  // ---- Timeline del proceso: la línea se dibuja según el scroll ----
+  const stepsEl = document.getElementById('steps');
+  const stepsFill = document.getElementById('stepsFill');
+  const stepEls = stepsEl ? Array.from(stepsEl.querySelectorAll('.step')) : [];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function updateTimeline() {
+    if (!stepsEl || !stepsFill) return;
+    const trackTop = 30;                       // coincide con top del track
+    const rect = stepsEl.getBoundingClientRect();
+    const trackHeight = rect.height - 60;      // top:30 + bottom:30
+    if (reduceMotion) {
+      stepsFill.style.height = trackHeight + 'px';
+      stepEls.forEach((s) => s.classList.add('active'));
+      return;
+    }
+    const playhead = window.innerHeight * 0.62; // punto de lectura en el viewport
+    const fillPx = Math.max(0, Math.min(trackHeight, (playhead - rect.top) - trackTop));
+    stepsFill.style.height = fillPx + 'px';
+    stepsFill.classList.toggle('on', fillPx > 0 && fillPx < trackHeight);
+    stepEls.forEach((step) => {
+      const num = step.querySelector('.step-num');
+      const nr = num.getBoundingClientRect();
+      const numCenter = (nr.top + nr.height / 2) - rect.top;
+      step.classList.toggle('active', numCenter <= trackTop + fillPx + 4);
+    });
+  }
+
+  function onScroll() {
+    const y = window.scrollY;
+    topbar.classList.toggle('scrolled', y > 30);
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = `${total > 0 ? (y / total) * 100 : 0}%`;
+    fab.classList.toggle('show', y > window.innerHeight * 0.7);
+    updateTimeline();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateTimeline, { passive: true });
+  onScroll();
+
+  // ---- Hero: carrusel fotográfico con fundido encadenado ----
+  const heroPhotos = document.getElementById('heroPhotos');
+  const heroCounter = document.getElementById('heroCounter');
+  if (heroPhotos && heroImages.length) {
+    const layers = heroImages.map((src, i) => {
+      const layer = document.createElement('div');
+      layer.className = 'hero-photo';
+      layer.style.backgroundImage = `url('${src}')`;
+      if (i === 0) layer.classList.add('active');
+      heroPhotos.appendChild(layer);
+      // Precarga para que el cambio no parpadee
+      const pre = new Image();
+      pre.src = src;
+      return layer;
+    });
+
+    let heroIndex = 0;
+    function paintCounter() {
+      if (heroCounter) {
+        heroCounter.textContent = `${String(heroIndex + 1).padStart(2, '0')} / ${String(layers.length).padStart(2, '0')}`;
+      }
+    }
+    paintCounter();
+
+    if (layers.length > 1 && !reduceMotion) {
+      setInterval(() => {
+        layers[heroIndex].classList.remove('active');
+        heroIndex = (heroIndex + 1) % layers.length;
+        layers[heroIndex].classList.add('active');
+        paintCounter();
+      }, 5600);
+    }
+  }
+
+  // ---- Galería + retrato desde el manifiesto ----
+  const slots = Array.from(document.querySelectorAll('#photoGallery .photo-slot'));
+  const portrait = document.getElementById('aboutPortrait');
+  if (portrait && manifest.portrait) {
+    portrait.style.backgroundImage = `url('${manifest.portrait}')`;
+  }
+
+  slots.forEach((slot, index) => {
+    const src = galleryImages[index];
+    if (!src) { slot.style.display = 'none'; return; }
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `Esempio di servizio fotografico ${index + 1}`;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    slot.appendChild(img);
+    slot.addEventListener('click', () => openLightbox(index));
+  });
+
+  // ---- Lightbox ----
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  let lbIndex = 0;
+
+  function openLightbox(index) {
+    lbIndex = index;
+    lbImg.src = galleryImages[lbIndex];
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function stepLightbox(direction) {
+    lbIndex = (lbIndex + direction + galleryImages.length) % galleryImages.length;
+    lbImg.src = galleryImages[lbIndex];
+  }
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); stepLightbox(-1); });
+  document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); stepLightbox(1); });
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') stepLightbox(-1);
+    if (e.key === 'ArrowRight') stepLightbox(1);
+  });
+
+  // ---- FAQ: cerrar los demás al abrir uno ----
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        document.querySelectorAll('.faq-item[open]').forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      }
+    });
+  });
+
+  // ---- Formatos: inclinación 3D y brillo siguiendo el cursor ----
+  if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.format').forEach((card) => {
+      const glare = card.querySelector('.format-glare');
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        const rotateX = (0.5 - y) * 8;
+        const rotateY = (x - 0.5) * 10;
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        if (glare) glare.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(245,151,21,.14), transparent 62%)`;
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.transform = '';
+        if (glare) glare.style.background = '';
+      });
+    });
+  }
+</script>
+</body>
+</html>
